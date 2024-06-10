@@ -158,7 +158,7 @@ function compileDirectory (dir, options, callback) {
     })
   }
 
-  glob(path.join(dir, '**/*'), function (err, filenames) {
+  glob(path.join(dir, '**/*'), { follow: true }, function (err, filenames) {
     if (err) {
       return callback(err)
     }
